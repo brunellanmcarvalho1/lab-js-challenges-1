@@ -16,7 +16,7 @@ const repeatedWords = [
 function howManyTimes(wordArray, wordToSearch) {
   let counter = 0;
   for (let i = 0; i < wordArray.length; i++) {
-    if (wordToSearch === repeatedWords[i]) {
+    if (wordToSearch === wordArray[i]) {
       counter += 1;
     }
   }
@@ -59,7 +59,7 @@ const toRemove = ["cat", "dog"];
 
 function filterOut(originalArray, toRemoveArray) {
   if (originalArray.length === 0) {
-    return null;
+    return [];
   } else {
     let newArray1 = originalArray.filter((a) => !toRemoveArray.includes(a));
     return newArray1;
